@@ -82,12 +82,12 @@
   "categories": [
     {
       "_id": "asd1293uasdads1",
-      "name": "House with beauty backyard",
+      "name": "Favorit Picture",
       "items": [
         {
           "_id": "asd1293uasdads1",
           "name": "PSW Antasari",
-          "imageUrl": "/images/treasure-1.jpg",
+          "imageUrl": "/images/merbabu.jpg",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -95,7 +95,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Kuretakeso",
-          "imageUrl": "/images/treasure-2.jpg",
+          "imageUrl": "/images/prau.jpg",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -103,7 +103,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Arya Duta",
-          "imageUrl": "/images/treasure-3.jpg",
+          "imageUrl": "/images/rinjani.jpg",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": true
@@ -111,7 +111,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Grand Dhika",
-          "imageUrl": "/images/treasure-4.jpg",
+          "imageUrl": "/images/semeru.jpg",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -121,7 +121,7 @@
   ],
   "testimonial": {
     "_id": "asd1293uasdads1",
-    "imageUrl": "/images/testimonial-detailspage.jpg",
+    "imageUrl": "/images/testi.jpeg",
     "name": "Happy Family",
     "rate": 4.25,
     "content": "What a great trip with my family and I should try again and again next time soon...",

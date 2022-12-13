@@ -256,3 +256,12 @@ section {
     color: $gray-900;
 
   }
+.select{
+  border: none;
+  background-color: $gray-100;
+  border-radius: 4px;
+  min-height: 45px;
+  font-family: "Poppins";
+  color:$gray-700;
+  font-weight: 400;
+}

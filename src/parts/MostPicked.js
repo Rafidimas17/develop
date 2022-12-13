@@ -5,7 +5,7 @@ function MostPicked(props) {
   return (
     <section className="container" ref={props.refMostPicked}>
       <Fade bottom>
-        <h4 className="most-picked-title">Most Picked</h4>
+        <h4 className="most-picked-title">Recommended</h4>
         <div className="container-grid">
           {props.data.map((item, index) => {
             return (
