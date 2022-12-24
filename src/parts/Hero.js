@@ -48,12 +48,12 @@ export default function Hero(props) {
               className="btn px-5"
               style={{
                 marginLeft: 10,
-                width: 200,
+                width: 205,
                 height: 45,
                 backgroundColor: "#3252DF",
                 color: "white",
                 fontFamily: "Poppins",
-                fontSize: 16,
+                fontSize: 15,
                 boxShadow: "0px 0px 15px rgba(35, 17, 238, 0.42)",
                 borderTopLeftRadius: 4,
                 borderTopRightRadius: 4,
@@ -67,7 +67,7 @@ export default function Hero(props) {
             <div className="row mt-5">
               <div
                 className="col-auto"
-                style={{ marginRight: 35, marginLeft: 10 }}
+                style={{ marginRight: 10, marginLeft: 10 }}
               >
                 <img
                   width="48"

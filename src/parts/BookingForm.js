@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+
 import propTypes from "prop-types";
 import Form from "react-bootstrap/Form";
+import Button from "elements/Button";
 import InputNumber from "elements/Form/InputNumber";
 import InputDate from "elements/Form/InputDate";
-import Button from "elements/Button";
+
 class BookingForm extends Component {
   constructor(props) {
     super(props);
@@ -14,12 +16,13 @@ class BookingForm extends Component {
         date: {
           startDate: new Date(),
           endDate: new Date(),
-          key: "selecetion",
+          key: "selection",
         },
       },
     };
   }
-  updateDate = (e) => {
+
+  updateData = (e) => {
     this.setState({
       ...this.state,
       data: {
@@ -28,8 +31,10 @@ class BookingForm extends Component {
       },
     });
   };
+
   componentDidUpdate(prevProps, prevState) {
     const { data } = this.state;
+
     if (prevState.data.date !== data.date) {
       const startDate = new Date(data.date.startDate);
       const endDate = new Date(data.date.endDate);
@@ -41,12 +46,14 @@ class BookingForm extends Component {
         },
       });
     }
+
     if (prevState.data.duration !== data.duration) {
       const startDate = new Date(data.date.startDate);
       const endDate = new Date(
         startDate.setDate(startDate.getDate() + +data.duration - 1)
       );
       this.setState({
+        ...this.state,
         data: {
           ...this.state.data,
           date: {
@@ -57,6 +64,7 @@ class BookingForm extends Component {
       });
     }
   }
+
   startBooking = () => {
     const { data } = this.state;
     this.props.startBooking({
@@ -69,6 +77,7 @@ class BookingForm extends Component {
     });
     this.props.history.push("/checkout");
   };
+
   render() {
     const { data } = this.state;
     const { itemDetails } = this.props;
@@ -82,35 +91,38 @@ class BookingForm extends Component {
             per {itemDetails.unit}
           </span>
         </h5>
-        <label htmlFor="duration">How long you advanture?</label>
+
+        <label htmlFor="duration">How long you will stay?</label>
         <InputNumber
           max={30}
-          suffix={"Day"}
+          suffix={" night"}
           isSuffixPlural
-          onChange={this.updateDate}
+          onChange={this.updateData}
           name="duration"
           value={data.duration}
         />
+
         <label htmlFor="date">Pick a date</label>
-        <InputDate onChange={this.updateDate} name="date" value={data.date} />
+        <InputDate onChange={this.updateData} name="date" value={data.date} />
         <label htmlFor="date">Choose Track</label>
         <Form.Select className="select">
           <option>Select Track</option>
           <option value="1">Suwanting</option>
         </Form.Select>
         <h6
-          className="text-gray-500 font-weight-light mt-3"
-          style={{ marginBottom: 20 }}
+          className="text-gray-500 font-weight-light"
+          style={{ marginBottom: 40 }}
         >
           You will pay{" "}
           <span className="text-gray-900">
-            ${itemDetails.price * data.duration}USD
+            ${itemDetails.price * data.duration} USD
           </span>{" "}
           per{" "}
           <span className="text-gray-900">
             {data.duration} {itemDetails.unit}
           </span>
         </h6>
+
         <Button
           className="btn"
           hasShadow
@@ -124,8 +136,10 @@ class BookingForm extends Component {
     );
   }
 }
+
 BookingForm.propTypes = {
   itemDetails: propTypes.object,
   startBooking: propTypes.func,
 };
+
 export default withRouter(BookingForm);

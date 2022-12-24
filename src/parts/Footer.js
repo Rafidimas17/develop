@@ -71,7 +71,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-3 mr-5">
+          <div className="col-3">
             <ul className="list-group list-group-flush">
               <li
                 className="list-groups-item"
